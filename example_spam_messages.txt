@@ -1,0 +1,36 @@
+# Money/Prize Related Spam
+1. "CONGRATULATIONS! You've won FREE MONEY! Claim your $10,000 prize now!!!"
+   - Triggers: free money, claim now, $amount, multiple exclamations
+   
+2. "Make money fast! Earn $5,000/week from home. 100% guaranteed success!"
+   - Triggers: make money, work from home, $amount, exclamations
+
+# Investment/Financial Spam
+3. "EXCLUSIVE investment opportunity! Double your money in 30 days. Limited time offer!"
+   - Triggers: investment opportunity, double your, limited offer, exclamations
+
+4. "Instant credit card approved! No credit check needed. Contact now: loans@example.com"
+   - Triggers: credit card approved, email present, exclamation
+
+# Medical/Health Spam
+5. "Buy cheap viagra pills online! Special discount offer - 90% off. Order at: pharmacy@spam.com or call 555-123-4567"
+   - Triggers: buy pills, special offer, email, phone number
+
+# Gambling/Casino Spam
+6. "ONLINE CASINO BONUSES!!! Get rich quick playing slots. Visit www.fake-casino.com NOW!"
+   - Triggers: casino, get rich, suspicious URL, excessive caps
+
+# Work/Income Spam
+7. "WORK FROM HOME!!! Make $10k/month. No experience needed! Contact: jobs@scam.com"
+   - Triggers: work from home, $amount, email, multiple exclamations
+
+# Multiple Signal Spam
+8. "LIMITED TIME OFFER!!! Get FREE CASH now! Email: money@scam.com or call 555-987-6543 Visit: www.get-rich-quick.com"
+   - Triggers: limited offer, free cash, email, phone, suspicious URL, multiple exclamations
+
+Each message above demonstrates different combinations of spam signals that our detector looks for:
+- Suspicious phrases and patterns
+- Money amounts ($XXX, $X,XXX/month)
+- Contact information (email + phone)
+- Formatting (ALL CAPS, multiple !!!)
+- Suspicious URLs

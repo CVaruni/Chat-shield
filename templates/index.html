@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section text-center py-5" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <!-- Shield Icon -->
+                <div class="mb-4">
+                    <i class="fas fa-shield-alt" style="font-size: 4rem; color: #fff;"></i>
+                </div>
+                
+                <h1 class="display-4 mb-4 fw-bold">Welcome to CHAT-SHIELD</h1>
+                <p class="lead mb-5" style="font-size: 1.4rem;">Your intelligent guardian against unwanted messages</p>
+                
+                <!-- Features -->
+                <div class="row mb-5 text-start">
+                    <div class="col-md-4">
+                        <div class="feature-card p-4" style="background: rgba(255, 255, 255, 0.1); border-radius: 10px;">
+                            <i class="fas fa-robot mb-3" style="font-size: 2rem;"></i>
+                            <h3 class="h5">Smart Detection</h3>
+                            <p class="small">Advanced pattern recognition to identify spam messages</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card p-4" style="background: rgba(255, 255, 255, 0.1); border-radius: 10px;">
+                            <i class="fas fa-bolt mb-3" style="font-size: 2rem;"></i>
+                            <h3 class="h5">Real-time Analysis</h3>
+                            <p class="small">Instant results with detailed threat analysis</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-card p-4" style="background: rgba(255, 255, 255, 0.1); border-radius: 10px;">
+                            <i class="fas fa-lock mb-3" style="font-size: 2rem;"></i>
+                            <h3 class="h5">Privacy First</h3>
+                            <p class="small">Your messages are never stored or shared</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Call to Action -->
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('check_spam') }}" class="btn btn-light btn-lg px-5 py-3" style="border-radius: 30px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                        <i class="fas fa-shield-alt me-2"></i>Check Message
+                    </a>
+                {% else %}
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="{{ url_for('login') }}" class="btn btn-light btn-lg px-5 py-3" style="border-radius: 30px; font-weight: 600; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                            <i class="fas fa-sign-in-alt me-2"></i>Login
+                        </a>
+                        <a href="{{ url_for('register') }}" class="btn btn-outline-light btn-lg px-5 py-3" style="border-radius: 30px; font-weight: 600;">
+                            <i class="fas fa-user-plus me-2"></i>Register
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

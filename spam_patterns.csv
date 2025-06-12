@@ -1,0 +1,57 @@
+Category,Pattern,Example Message,Detection Weight,Explanation
+,,,,
+# Money and Prize Related,,,,
+Money/Prize,free money|win prize|won cash|free gift,"CONGRATULATIONS! You've won FREE MONEY! Claim your $10,000 prize now!!!",0.4,"Triggers: free money pattern, claim now, $amount, exclamations"
+Money/Prize,earn money|make money,"Make money fast! Earn $5,000/week from home. 100% guaranteed success!",0.4,"Triggers: make money, work from home, $amount pattern"
+Money/Prize,get rich,Get rich quick playing slots! Easy money guaranteed!,0.4,"Triggers: get rich pattern, exclamations"
+Money/Prize,double your,Double your investment in 30 days! 100% guaranteed return!,0.4,"Triggers: double your pattern, exclamations"
+Money/Prize,100% free,100% FREE CASH! No strings attached! Act now!,0.4,"Triggers: 100% free pattern, caps usage"
+,,,,
+# Urgency Related,,,,
+Urgency,limited offer|special offer,LIMITED TIME OFFER: Buy now and save 90%!!!,0.4,"Triggers: limited offer pattern, caps, exclamations"
+Urgency,claim now|claim today|claim your,"Claim your $1,000 prize TODAY! Time running out!",0.4,"Triggers: claim now pattern, $amount, exclamations"
+Urgency,act now|click now,ACT NOW! Only 5 spots remaining! Click here!,0.4,"Triggers: act now pattern, caps, exclamations"
+,,,,
+# Financial Related,,,,
+Financial,credit card approved,Your credit card is pre-approved! No credit check needed. Contact: cards@example.com,0.4,"Triggers: credit card pattern, email present"
+Financial,loan approved,INSTANT LOAN APPROVED! Contact 555-123-4567 for your cash!,0.4,"Triggers: loan pattern, caps, phone number"
+Financial,investment opportunity,EXCLUSIVE Investment Opportunity! 1000% ROI guaranteed. Email: invest@scam.com,0.4,"Triggers: investment pattern, caps, email"
+,,,,
+# Medical Related,,,,
+Medical,buy viagra|cheap viagra,Buy cheap viagra online! 90% off! Contact: pills@example.com or 555-987-6543,0.4,"Triggers: viagra pattern, email, phone"
+Medical,buy pills|cheap pills|discount pills,Discount pills! No prescription needed! Visit www.cheap-meds.com,0.4,"Triggers: pills pattern, suspicious URL"
+,,,,
+# Gambling Related,,,,
+Gambling,casino,ONLINE CASINO BONUSES!!! Win big at www.casino-scam.com,0.4,"Triggers: casino pattern, caps, URL"
+,,,,
+# Work Related,,,,
+Work,work from home,WORK FROM HOME!!! Make $10k/month. Email: jobs@scam.com,0.4,"Triggers: work pattern, caps, $amount, email"
+,,,,
+# Combined Patterns,,,,
+Multiple Patterns,Multiple Triggers,URGENT: Work from home opportunity! Make $5k/week! Contact: money@scam.com or 555-123-4567. Visit www.get-rich-quick.com NOW!!!,0.4,"Triggers: multiple patterns, caps, contact info"
+,,,,
+# Contact Methods,,,,
+Contact Methods,Email + Phone Present,Contact our support: spam@example.com or call 555-123-4567,0.15,Triggers: both email and phone present
+,,,,
+# URL Related,,,,
+URL,Suspicious URLs,Get rich at www.casino-scam.com or www.easy-money.com,0.2,Triggers: suspicious URLs with spam keywords
+,,,,
+# Formatting,,,,
+Formatting,High CAPS Ratio,GET RICH QUICK!!! 100% FREE MONEY!!!,0.1,Triggers: excessive caps usage
+Formatting,Multiple Exclamations,Don't miss out!!! Limited time!!! Act now!!!,0.15,Triggers: multiple exclamation marks
+,,,,
+# Money Amounts,,,,
+Money Amounts,$XXX or $XXX/time period,"Earn $5,000/week! $10k monthly! 5000 USD guaranteed!",0.4,Triggers: money amount patterns
+,,,,
+Note: Spam Score Calculation,,,,
+1. Each pattern match adds its weight to the total score,,,,
+2. Multiple patterns can match in a single message,,,,
+3. Message is marked as spam if total score > 0.5 (50%),,,,
+4. Weights: Patterns (0.4), URLs (0.2), CAPS (0.1), Contact Info (0.15), Punctuation (0.15)
+,,,,
+Example Combined Score:,,,,
+- Pattern match (0.4),,,,
+- Suspicious URL (0.2),,,,
+- Email + Phone (0.15),,,,
+- Exclamations (0.15),,,,
+Total: 0.9 = Definite Spam,,,,

@@ -1,0 +1,50 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.form-container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.result-container {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.result-spam {
+    background-color: #ffe6e6;
+    border: 2px solid #ff4444;
+}
+
+.result-clean {
+    background-color: #e6ffe6;
+    border: 2px solid #44ff44;
+}
+
+.result-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.history-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.history-item.spam {
+    border-left: 4px solid #ff4444;
+}
+
+.history-item.clean {
+    border-left: 4px solid #44ff44;
+}

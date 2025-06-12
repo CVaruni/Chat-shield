@@ -1,0 +1,80 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+    <div class="container mt-4">
+        <h2 class="text-center mb-4">CHAT-SHIELD Analytics</h2>
+        
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Overall Statistics</h4>
+                        <div class="row mt-3">
+                            <div class="col-6 text-center">
+                                <h5>Total Messages</h5>
+                                <h2>{{ total_messages }}</h2>
+                            </div>
+                            <div class="col-6 text-center">
+                                <h5>Spam Messages</h5>
+                                <h2>{{ total_spam }}</h2>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <h5>Spam Ratio</h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-danger"
+                                     role="progressbar"
+                                     style="width: {{ '%.1f'|format((total_spam / total_messages * 100) if total_messages > 0 else 0) }}%"
+                                     aria-valuenow="{{ (total_spam / total_messages * 100) if total_messages > 0 else 0 }}"
+                                     aria-valuemin="0"
+                                     aria-valuemax="100">
+                                    {{ "%.1f"|format((total_spam / total_messages * 100) if total_messages > 0 else 0) }}%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h4>Daily Statistics</h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Total Messages</th>
+                                <th>Spam Messages</th>
+                                <th>Spam Ratio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for stat in stats %}
+                            <tr>
+                                <td>{{ stat.date }}</td>
+                                <td>{{ stat.total_messages }}</td>
+                                <td>{{ stat.spam_messages }}</td>
+                                <td>
+                                    <div class="progress" style="height: 20px">
+                                        <div class="progress-bar bg-danger"
+                                             role="progressbar"
+                                             style="width: {{ stat.spam_ratio * 100 }}%"
+                                             aria-valuenow="{{ stat.spam_ratio * 100 }}"
+                                             aria-valuemin="0"
+                                             aria-valuemax="100">
+                                            {{ "%.1f"|format(stat.spam_ratio * 100) }}%
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
