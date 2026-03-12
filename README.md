@@ -4,7 +4,6 @@ SCREENSHOTS
 <img width="702" height="356" alt="ss1" src="https://github.com/user-attachments/assets/4a957bc9-d3cb-40dc-8456-18e182394190" />
 <img width="738" height="398" alt="ss2" src="https://github.com/user-attachments/assets/ed8ad9a8-cfc1-4fab-9326-e18de0ae6f21" />
 <img width="795" height="433" alt<img width="785" height="395" alt="ss4" src="https://github.com/user-attachments/assets/9c6fa88e-2f18-4bda-a2c1-1edabcee16ad" />
-<img width="785" height="395" alt="ss4" src="https://github.com/user-attachments/assets/cebdda90-8ca4-4b3d-ad46-1a0c7e753d23" />
 
 I. Overview
 Chat-Shield is a rule-based spam detection system built as a web application that empowers users to verify suspicious messages themselves.
